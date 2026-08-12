@@ -3,6 +3,7 @@
 from google.adk.agents import Agent
 from google.adk.tools.agent_tool import AgentTool
 
+from .guardrails import block_investment_recommendations
 from .schemas import SynthesisReport
 
 try:
@@ -30,6 +31,7 @@ root_agent = Agent(
     model="gemini-3.1-flash-lite",
     description="Combines specialist evidence into an explainable investment research report.",
     output_schema=SynthesisReport,
+    before_tool_callback=block_investment_recommendations,
     instruction="""
 You are the Synthesis Agent for an investment research system.
 

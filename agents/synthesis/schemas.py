@@ -52,4 +52,3 @@ class SynthesisReport(BaseModel):
     evidence_and_sources: list[SynthesisEvidence] = Field(
         description="Traceable evidence and sources used in the report."
     )
-
