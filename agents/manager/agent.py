@@ -32,7 +32,7 @@ root_agent = Agent(
     name="manager_orchestrator_agent",
     model="gemini-3.1-flash-lite",
     description="Selects specialist agents and returns a final synthesized research report.",
-    before_model_callback=block_personalized_financial_advice,
+    before_model_callback=block_personalized_financial_advice, # Before calling the Gemini model, run the function block_personalized_financial_advice
     instruction="""
 You are the Manager / Orchestrator Agent for an investment research system.
 
