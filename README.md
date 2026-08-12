@@ -199,5 +199,3 @@ To add new capabilities:
 - Use your own `GOOGLE_API_KEY` and keep it private.
 
 ---
-
-If you want, I can also help create a `requirements.txt` file and add a sample startup script to make the project easier to run.
